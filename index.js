@@ -13,8 +13,8 @@ module.exports = function(name, props) {
         children = children[0];
     }
 
-    if (typeof name === 'object' && name.render) {
-        return name.render(props, children);
+    if (typeof name === 'object' && name.__tr__render) {
+        return name.__tr__render(props, children);
     }
 
     if (typeof name === 'function') {
