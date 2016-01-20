@@ -4,11 +4,9 @@ const fs = require('fs');
 const path = require('path');
 const assert = require('assert');
 const babel = require('babel-core');
-const toHTML = require('vdom-to-html');
 const transformOpts = {
     plugins: [
-        ['transform-react-jsx', {pragma: 'tr'}],
-        'transform-object-rest-spread'
+        ['transform-react-jsx', {pragma: 'tr'}]
     ]
 };
 const read = file => fs.readFileSync(path.resolve(__dirname, file), 'utf8').trim();
